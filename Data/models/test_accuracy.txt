@@ -1,0 +1,6 @@
+(Image) Test accuracy:  100%
+Train accuracy: 100% (loss: 1.8379e-04)
+Validation accuracy: 99.83% (loss: 0.0026)
+WOW!
+(Market) Test accuracy: 99.11288076404158%
+Train accuracy: 99.88642800257487%
