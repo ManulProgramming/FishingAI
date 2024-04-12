@@ -11,7 +11,7 @@ Price determination is done through another model in the program, LinearRegressi
 
 - **Week 11: Training a model to identify fish from a picture.**
 
-Writing code using tensorflow/keras to load and process pictures of different fish species based on GT (ground truth) blanks. All pictures go through additional augmentation for deeper learning. There will also be data partitioning for training (75%), validation (10%) and testing (15%). The model will be located as a separate .h5 file.
+Writing code using tensorflow/keras to load and process pictures of different fish species. All pictures go through additional augmentation for deeper learning. There will also be data partitioning for training (75%), validation (10%) and testing (15%). The model will be located as a separate .h5 file.
 
 - **Week 12: Collecting fish sales market data.**
 
@@ -60,7 +60,7 @@ This will launch the GUI with an option to upload the image with a fish and then
 Run the application parsingdata.py from the folder /FishingAI/Data using this command:
 
 ```bash
-python Data/parsingdata.py
+python parsingdata.py
 ```
 
 This will parse data from Selina Wamucii's website and automatically clear unnecessary information that is considered to be duplicated. The created .csv file is located in Data/train/fish_weekly_prices.csv
@@ -70,7 +70,7 @@ This will parse data from Selina Wamucii's website and automatically clear unnec
 Run the application fishmarketmodel_train.py from the folder /FishingAI/Data using this command:
 
 ```bash
-python Data/fishmarketmodel_train.py
+python fishmarketmodel_train.py
 ```
 
 This will train a model that will predict a price for every possible (in this repository) type of fish based on the database located in Data/train/fish_weekly_prices.csv. Trained models will be created/replaced in Data/models/fishprice.pkl
@@ -80,7 +80,7 @@ This will train a model that will predict a price for every possible (in this re
 Run the application fishimagemodel_train.py from the folder /FishingAI/Data using this command:
 
 ```bash
-python Data/fishimagemodel_train.py
+python fishimagemodel_train.py
 ```
 
 This will run a console application with the information on what is happening on the screen. The model will be trained on the dataset located in Data/train/Fish_Dataset. The process of training might take a long time depending on your machine. it will create an updated model for the prediction of what type of fish is in the picture. The trained model will be located in the Data/models folder named fishimage.h5
