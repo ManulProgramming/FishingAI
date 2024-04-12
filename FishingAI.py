@@ -94,14 +94,14 @@ def upload_image():
         messagebox.showinfo(title="AI learning is starting!", message="Please wait! It might take a long time!")
         parsing_training()
     date_today=datetime.today()
-    new_data={'date':[date_today.strftime("%x").split('/')[1]+'/'+date_today.strftime("%x").split('/')[0]+'/'+"20"+date_today.strftime("%x").split('/')[2]],'name_Hourse Mackerel':[True if predicted_class==2 else False],'name_Sea Bass':[True if predicted_class==5 else False],'name_Sea Bream':[True if predicted_class==4 or predicted_class==1 else False],'name_Shrimp':[True if predicted_class==6 else False],'name_Trout':[True if predicted_class==8 else False]}
+    new_data={'date':[date_today.strftime("%x").split('/')[1]+'/'+date_today.strftime("%x").split('/')[0]+'/'+"20"+date_today.strftime("%x").split('/')[2]],'name_Hourse Mackerel':[True if predicted_class==1 else False],'name_Sea Bass':[True if predicted_class==3 else False],'name_Sea Bream':[True if predicted_class==0 or predicted_class==2 else False],'name_Shrimp':[True if predicted_class==4 else False],'name_Trout':[True if predicted_class==5 else False]}
     super_new_data=pd.DataFrame(data=new_data)
     super_new_data['date'] = pd.to_datetime(super_new_data['date'],dayfirst=True)
     super_new_data['date'] = (super_new_data['date'] - pd.to_datetime('22/3/2024',dayfirst=True)) / pd.Timedelta(days=1)
     prediction = loaded_model_market.predict(super_new_data)
     result_label2.configure(text=str(round(prediction[0],2)))
     date_today=datetime.today()+timedelta(days=30)
-    new_data={'date':[date_today.strftime("%x").split('/')[1]+'/'+date_today.strftime("%x").split('/')[0]+'/'+"20"+date_today.strftime("%x").split('/')[2]],'name_Hourse Mackerel':[True if predicted_class==2 else False],'name_Sea Bass':[True if predicted_class==5 else False],'name_Sea Bream':[True if predicted_class==4 or predicted_class==1 else False],'name_Shrimp':[True if predicted_class==6 else False],'name_Trout':[True if predicted_class==8 else False]}
+    new_data={'date':[date_today.strftime("%x").split('/')[1]+'/'+date_today.strftime("%x").split('/')[0]+'/'+"20"+date_today.strftime("%x").split('/')[2]],'name_Hourse Mackerel':[True if predicted_class==1 else False],'name_Sea Bass':[True if predicted_class==3 else False],'name_Sea Bream':[True if predicted_class==0 or predicted_class==2 else False],'name_Shrimp':[True if predicted_class==4 else False],'name_Trout':[True if predicted_class==5 else False]}
     super_new_data=pd.DataFrame(data=new_data)
     super_new_data['date'] = pd.to_datetime(super_new_data['date'],dayfirst=True)
     super_new_data['date'] = (super_new_data['date'] - pd.to_datetime('25/3/2024',dayfirst=True)) / pd.Timedelta(days=1)
