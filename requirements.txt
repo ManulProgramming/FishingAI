@@ -48,7 +48,7 @@ scipy==1.13.0
 six==1.16.0
 soupsieve==2.5
 sqlite-bro==0.12.1
-tensorboard==2.10.1
+tensorboard==2.11.1
 tensorboard-data-server==0.6.1
 tensorboard-plugin-wit==1.8.1
 tensorflow==2.10.1
